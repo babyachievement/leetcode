@@ -1,6 +1,6 @@
 /**
  * FileName:LongestCommonPrefix
- * Created by HaoQiang
+ * Created by babyachievement
  * Date:17-7-19
  * Time:下午8:52
  */

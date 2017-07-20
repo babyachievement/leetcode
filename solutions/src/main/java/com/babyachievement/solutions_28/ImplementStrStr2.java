@@ -10,9 +10,9 @@
  */
 package com.babyachievement.solutions_28;
 
-public class ImplementStrStr {
+public class ImplementStrStr2 {
     /**
-     * my
+     * Brute-Force算法实现
      *
      * @param haystack
      * @param needle
@@ -24,24 +24,22 @@ public class ImplementStrStr {
         }
         int stackLength = haystack.length();
         int needleLength = needle.length();
-        if (needleLength > stackLength) {
-            return -1;
-        }
 
-        if (needle.isEmpty()) {
-            return 0;
-        }
 
-        for (int i = 0; i < stackLength - needleLength + 1; i++) {
-            for (int j = 0; j < needleLength; j++) {
-                if (haystack.charAt(i + j) != needle.charAt(j)) {
-                    break;
-                } else {
-                    if (j == needleLength - 1) {
-                        return i;
-                    }
-                }
+        int i = 0, j = 0;
+
+        while (i < stackLength && j < needleLength) {
+            if (haystack.charAt(i) == needle.charAt(j)) {
+                i++;
+                j++;
+            } else {
+                i = i - j + 1;
+                j = 0;
             }
+        }
+
+        if (j >= needleLength) {
+            return i - j;
         }
 
         return -1;

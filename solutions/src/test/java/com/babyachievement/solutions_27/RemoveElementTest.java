@@ -7,7 +7,7 @@ import static org.junit.Assert.*;
 
 /**
  * FileName:RemoveElementTest
- * Created by HaoQiang
+ * Created by babyachievement
  * Date:17-7-20
  * Time:上午7:45
  */

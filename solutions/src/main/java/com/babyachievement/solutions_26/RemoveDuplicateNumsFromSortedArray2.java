@@ -1,6 +1,6 @@
 /**
  * FileName:RemoveDuplicateNumsFromSortedArray
- * Created by HaoQiang
+ * Created by babyachievement
  * Date:17-7-19
  * Time:下午11:37
  */

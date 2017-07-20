@@ -1,14 +1,12 @@
 /**
  * FileName:ValidParentheses
- * Created by HaoQiang
+ * Created by babyachievement
  * Date:17-7-19
  * Time:下午10:18
  */
 package com.babyachievement.solutions_20;
 
-import javax.sound.midi.Soundbank;
 import java.util.HashMap;
-import java.util.LinkedList;
 import java.util.Map;
 import java.util.Stack;
 

@@ -7,7 +7,7 @@ import static org.junit.Assert.*;
 
 /**
  * FileName:LongestCommonPrefixVerticalScanningTest
- * Created by HaoQiang
+ * Created by babyachievement
  * Date:17-7-19
  * Time:下午9:52
  */

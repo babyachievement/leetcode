@@ -7,7 +7,7 @@ import static org.junit.Assert.*;
 
 /**
  * FileName:LongestCommonPrefixTest
- * Created by HaoQiang
+ * Created by babyachievement
  * Date:17-7-19
  * Time:下午8:57
  */
