@@ -5,6 +5,7 @@ import org.junit.Test;
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
 
 /**
@@ -62,27 +63,13 @@ public class ThreeSumTest {
     }
 
     @Test
-    public void testSearch() throws Exception {
-        List<Integer> integerList = new ArrayList<>();
-        integerList.add(-4);
-        integerList.add(-2);
-        integerList.add(-2);
-        integerList.add(-2);
-        integerList.add(0);
-        integerList.add(1);
-        integerList.add(2);
-        integerList.add(2);
-        integerList.add(2);
-        integerList.add(3);
-        integerList.add(3);
-        integerList.add(4);
-        integerList.add(4);
-        integerList.add(6);
-        integerList.add(6);
-
+    public void test4() throws Exception {
+        int[] S = {0,0,0,0};
         ThreeSum threeSum = new ThreeSum();
-        int search = threeSum.search(integerList, 5, integerList.size() - 1, 4);
+        List<List<Integer>> lists = threeSum.threeSum(S);
+        assertThat(lists.size(), is(1));
     }
+
 
     @Test
     public void test2() throws Exception {
