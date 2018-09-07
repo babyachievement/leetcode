@@ -4,6 +4,8 @@
 
 package org.babyachievement.algorithms.binarytree;
 
+import org.babyachievement.algorithms.structure.TreeNode;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;

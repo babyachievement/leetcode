@@ -4,6 +4,8 @@
 
 package org.babyachievement.algorithms.binarytree;
 
+import org.babyachievement.algorithms.structure.TreeNode;
+
 public class ClosestBSTValue {
     private TreeNode current;
     private double minSub = Double.MAX_VALUE;

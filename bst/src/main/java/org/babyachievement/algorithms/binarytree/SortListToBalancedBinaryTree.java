@@ -4,6 +4,9 @@
 
 package org.babyachievement.algorithms.binarytree;
 
+import org.babyachievement.algorithms.structure.ListNode;
+import org.babyachievement.algorithms.structure.TreeNode;
+
 public class SortListToBalancedBinaryTree {
     ListNode head;
 

@@ -4,6 +4,8 @@
 
 package org.babyachievement.algorithms.binarytree;
 
+import org.babyachievement.algorithms.structure.TreeNode;
+
 public class BSTIteratorMorrisTravel {
 
     private TreeNode current;
