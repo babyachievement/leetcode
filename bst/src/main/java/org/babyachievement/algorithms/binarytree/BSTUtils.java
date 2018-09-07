@@ -47,4 +47,30 @@ public class BSTUtils {
 
         return false;
     }
+
+
+    public static TreeNode rightMostOfLeftSubTree(TreeNode treeNode) {
+        if (treeNode.left != null) {
+            TreeNode pre = treeNode.left;
+            while (pre.right != null) {
+                pre = pre.right;
+            }
+            return pre;
+        } else {
+            return null;
+        }
+    }
+
+    public static TreeNode leftMostOfRightSubTree(TreeNode treeNode) {
+        if (treeNode.right != null) {
+            TreeNode pre = treeNode.right;
+            while (pre.left != null) {
+                pre = pre.left;
+            }
+            return pre;
+        } else {
+            return null;
+        }
+    }
+
 }
