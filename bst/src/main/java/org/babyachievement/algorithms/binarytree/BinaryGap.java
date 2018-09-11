@@ -5,7 +5,24 @@ package org.babyachievement.algorithms.binarytree;
  */
 public class BinaryGap {
     public int binaryGap(int N) {
-        // TODO
-        return 0;
+        int max = 0;
+
+        int i = 0;
+        int pre = 0;
+
+        int temp = N;
+        while (temp != 0) {
+            i++;
+            if((temp & 1) > 0) {
+                if (pre > 0 && (i-pre)>max) {
+                    max = i - pre;
+                }
+                pre = i;
+            }
+            temp = temp >> 1;
+
+        }
+
+        return max;
     }
 }
