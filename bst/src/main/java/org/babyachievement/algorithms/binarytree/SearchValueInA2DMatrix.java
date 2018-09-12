@@ -1,5 +1,8 @@
 package org.babyachievement.algorithms.binarytree;
 
+/**
+ *
+ */
 public class SearchValueInA2DMatrix {
     public boolean searchMatrix(int[][] matrix, int target) {
         if (matrix == null) {
