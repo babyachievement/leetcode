@@ -18,7 +18,7 @@ public class PrintBinaryTree {
             return null;
         }
 
-        totalHeight = maxHeight(root);
+        totalHeight = BSTUtils.maxHeight(root);
 
         List<List<String>> levelStrs = new ArrayList<>(totalHeight);
         for (int i = 0; i < totalHeight; i++) {
@@ -53,14 +53,6 @@ public class PrintBinaryTree {
         levelStrs.get(currentHeight - 1).add(String.valueOf(root.val));
         fillNEmpty(levelStrs.get(currentHeight - 1), (1 << totalHeight - currentHeight + 1) - 1);
         inOrderTravel(root.right, levelStrs, currentHeight + 1);
-    }
-
-    private int maxHeight(TreeNode root) {
-        if (root == null) {
-            return 0;
-        }
-
-        return 1 + Math.max(maxHeight(root.left), maxHeight(root.right));
     }
 
     private void fillNEmpty(List<String> level, int n) {

@@ -75,4 +75,12 @@ public class BSTUtils {
         }
     }
 
+
+    public static int maxHeight(TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+
+        return 1 + Math.max(maxHeight(root.left), maxHeight(root.right));
+    }
 }
