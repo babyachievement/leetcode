@@ -7,7 +7,14 @@ import org.babyachievement.algorithms.structure.TreeNode;
  */
 public class InvertBinaryTree {
     public TreeNode invertTree(TreeNode root) {
-        // TODO
-        return null;
+        if (null == root) {
+            return null;
+        }
+        TreeNode left  = root.left;
+        TreeNode right = root.right;
+
+        root.left = invertTree(right);
+        root.right = invertTree(left);
+        return root;
     }
 }
