@@ -7,7 +7,15 @@ import org.babyachievement.algorithms.structure.TreeNode;
  */
 public class BinaryTreePruning {
     public TreeNode pruneTree(TreeNode root) {
-        // TODO
-        return null;
+        if (root == null) {
+            return null;
+        }
+
+        root.left = pruneTree(root.left);
+        root.right = pruneTree(root.right);
+        if (root.left == null && root.right == null && root.val == 0) {
+            return null;
+        }
+        return root;
     }
 }
