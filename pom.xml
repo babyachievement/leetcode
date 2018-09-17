@@ -37,6 +37,7 @@
         <module>solutions</module>
         <module>bst</module>
         <module>structure</module>
+        <module>top-100-liked</module>
     </modules>
 
     <build>
