@@ -4,6 +4,9 @@
 
 package com.babyachievement.top100;
 
+/**
+ * https://leetcode.com/problems/unique-paths/description/
+ */
 public class UniquePaths {
     public int uniquePaths(int m, int n) {
         int[][] v = new int[m][n];
@@ -18,13 +21,13 @@ public class UniquePaths {
                 }
                 if (j == n - 1) {
                     right = 0;
-                }else {
+                } else {
                     right = v[i][j + 1];
                 }
 
                 if (i == m - 1) {
                     down = 0;
-                }else {
+                } else {
                     down = v[i + 1][j];
                 }
 
