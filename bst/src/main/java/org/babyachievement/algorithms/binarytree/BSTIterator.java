@@ -5,6 +5,7 @@
 package org.babyachievement.algorithms.binarytree;
 
 import org.babyachievement.algorithms.structure.TreeNode;
+import org.babyachievement.algorithms.structure.utils.BSTUtils;
 
 public class BSTIterator {
 

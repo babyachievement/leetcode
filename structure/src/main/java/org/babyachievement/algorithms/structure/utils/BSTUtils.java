@@ -2,7 +2,7 @@
  * date: 2018/9/6 10:23
  */
 
-package org.babyachievement.algorithms.binarytree;
+package org.babyachievement.algorithms.structure.utils;
 
 import org.babyachievement.algorithms.structure.TreeNode;
 
@@ -82,5 +82,25 @@ public class BSTUtils {
         }
 
         return 1 + Math.max(maxHeight(root.left), maxHeight(root.right));
+    }
+
+    public static void printInOrderBST(TreeNode root) {
+        if (root == null) {
+            return;
+        }
+
+        printInOrderBST(root.left);
+        System.out.println(root.val);
+        printInOrderBST(root.right);
+    }
+
+    public static void printPreOrderBST(TreeNode root) {
+        if (root == null) {
+            return;
+        }
+
+        System.out.println(root.val);
+        printPreOrderBST(root.left);
+        printPreOrderBST(root.right);
     }
 }
