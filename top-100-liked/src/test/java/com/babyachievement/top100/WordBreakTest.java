@@ -5,7 +5,8 @@ import org.junit.Test;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 /**
  * date: 2018/9/18 16:31
@@ -14,10 +15,10 @@ public class WordBreakTest {
 
     @Test
     public void wordBreak() {
-        final WordBreak wordBreak = new WordBreak();
-        assertTrue(wordBreak.wordBreak("leetcode",
+        final WordBreak aBreak = new WordBreak();
+        assertTrue(aBreak.wordBreak2("leetcode",
                                        Arrays.asList("leet", "code")));
-        assertFalse(wordBreak.wordBreak("catsandog",
+        assertFalse(aBreak.wordBreak2("catsandog",
                                         Arrays.asList("cats", "dog",
                                                       "sand",
                                                       "and", "cat")));
@@ -373,7 +374,13 @@ public class WordBreakTest {
                                                    "iohchafbega",
                                                    "kjejfhbco",
                                                    "anlhhhhg");
-        System.out.println(wordBreak.wordBreak("fohhemkkaecojceoaejkkoedkofhmohkcjmkggcmnami", strings));
+        System.out.println(aBreak.wordBreak2("fohhemkkaecojceoaejkkoedkofhmohkcjmkggcmnami", strings));
 
+
+        String[] words = {"a", "aa", "aaa", "aaaa", "aaaaa", "aaaaaa", "aaaaaaa",
+                "aaaaaaaa",
+                "aaaaaaaaa", "aaaaaaaaaa"};
+        System.out.println(aBreak.wordBreak2
+                ("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab", Arrays.asList(words)));
     }
 }
