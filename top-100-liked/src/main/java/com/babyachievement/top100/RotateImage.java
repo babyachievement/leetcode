@@ -17,25 +17,25 @@ public class RotateImage {
         while (cycyle <= n / 2) {
             int move = n - cycyle * 2 + 1;
 
-            for (int i = 0; i < n - 2 * cycyle+1; i++) {
+            for (int i = 0; i < n - 2 * cycyle + 1; i++) {
                 int firstV = matrix[cycyle - 1][cycyle - 1];
                 // 左边
                 for (int j = 0; j < n - 2 * cycyle + 1; j++) {
-                    matrix[j+cycyle-1][cycyle - 1] = matrix[j + cycyle][cycyle - 1];
+                    matrix[j + cycyle - 1][cycyle - 1] = matrix[j + cycyle][cycyle - 1];
                 }
 
                 // 下边
                 for (int j = 0; j < n - 2 * cycyle + 1; j++) {
-                    matrix[n-cycyle][j+cycyle-1] = matrix[n-cycyle][j+cycyle];
+                    matrix[n - cycyle][j + cycyle - 1] = matrix[n - cycyle][j + cycyle];
                 }
 
                 // 右边
-                for(int j= n-cycyle; j > cycyle-1; j--) {
+                for (int j = n - cycyle; j > cycyle - 1; j--) {
                     matrix[j][n - cycyle] = matrix[j - 1][n - cycyle];
                 }
 
                 // 上边
-                for(int j=n-cycyle; j > cycyle; j--) {
+                for (int j = n - cycyle; j > cycyle; j--) {
                     matrix[cycyle - 1][j] = matrix[cycyle - 1][j - 1];
                 }
 
@@ -48,7 +48,6 @@ public class RotateImage {
     }
 
     /**
-     *
      * @param matrix
      */
     public void rotate2(int[][] matrix) {
@@ -58,14 +57,20 @@ public class RotateImage {
         }
 
 
-        for(int s=0; s<n/2; s++) {
+        /**
+         * 上下交换
+         */
+        for (int s = 0; s < n / 2; s++) {
             for (int i = 0; i < n; i++) {
                 int temp = matrix[s][i];
-                matrix[s][i] = matrix[n - 1 -s][i];
-                matrix[n -s- 1][i] = temp;
+                matrix[s][i] = matrix[n - 1 - s][i];
+                matrix[n - s - 1][i] = temp;
             }
         }
 
+        /**
+         * 对称交换
+         */
         for (int i = 0; i < n; ++i) {
             for (int j = i + 1; j < n; ++j) {
                 int temp = matrix[i][j];
