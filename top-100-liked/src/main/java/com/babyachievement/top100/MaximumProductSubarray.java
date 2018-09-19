@@ -4,6 +4,9 @@
 
 package com.babyachievement.top100;
 
+/**
+ * https://leetcode.com/problems/maximum-product-subarray/description/
+ */
 public class MaximumProductSubarray {
     public int maxProduct(int[] nums) {
         final int   length = nums.length;
