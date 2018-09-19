@@ -41,19 +41,19 @@ public class WordBreak {
     }
 
     public boolean wordBreak2(String s, List<String> wordDict) {
-        int[] visited = new int[s.length() + 1];
+        boolean[] visited = new boolean[s.length() + 1];
         return wordBreak(s, wordDict, visited, 0);
     }
 
-    boolean wordBreak(String s, List<String> wordDict, int[] visited, int offset) {
-        visited[offset] = 1;
+    boolean wordBreak(String s, List<String> wordDict, boolean[] visited, int offset) {
+        visited[offset] = true;
         if (offset == s.length()) {
             return true;
         }
 
         for (String word : wordDict) {
             if (s.startsWith(word, offset)) {
-                if (visited[offset + word.length()] == 0) {
+                if (!visited[offset + word.length()] ) {
                     if (wordBreak(s,
                                   wordDict,
                                   visited,
