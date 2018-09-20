@@ -4,6 +4,9 @@
 
 package com.babyachievement.top100;
 
+/**
+ * https://leetcode.com/problems/number-of-islands/description/
+ */
 public class NumberofIslands200 {
     public int numIslands(char[][] grid) {
         int count = 0;
@@ -54,7 +57,7 @@ public class NumberofIslands200 {
 
     private void colorAround(char[][] grid, int m, int n, int i, int j, char color) {
 
-        if (i >= 0 && i < m && j >= 0 && j < n && grid[i][j ] == '1') {
+        if (i >= 0 && i < m && j >= 0 && j < n && grid[i][j] == '1') {
             grid[i][j] = color;
             if (j > 0) {
                 colorAround(grid, m, n, i, j - 1, color);
@@ -65,11 +68,11 @@ public class NumberofIslands200 {
             }
 
             if (i > 0) {
-                colorAround(grid, m, n, i-1, j, color);
+                colorAround(grid, m, n, i - 1, j, color);
             }
 
             if (i < m) {
-                colorAround(grid, m, n, i+1, j, color);
+                colorAround(grid, m, n, i + 1, j, color);
             }
         }
 
