@@ -103,4 +103,23 @@ public class BSTUtils {
         printPreOrderBST(root.left);
         printPreOrderBST(root.right);
     }
+
+    public static TreeNode listToTree(List<Integer> list) {
+        if (list == null || list.isEmpty()) {
+            return null;
+        }
+
+        return level(list, 0);
+    }
+
+
+    private static TreeNode level(List<Integer> list, int index) {
+        if ( index>= list.size()||null == list.get(index)) {
+            return null;
+        }
+        final TreeNode treeNode = new TreeNode(list.get(index).intValue());
+        treeNode.left = level(list, 2 * index + 1);
+        treeNode.right = level(list, 2 * index + 2);
+        return treeNode;
+    }
 }
