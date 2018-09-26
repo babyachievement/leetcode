@@ -14,8 +14,7 @@ public class BestTimetoBuyAndSellStock121 {
         for (int price : prices) {
             if (price < min) {
                 min = price;
-            }
-            if (price - min > profit) {
+            } else if (price - min > profit) {
                 profit = price - min;
             }
         }
