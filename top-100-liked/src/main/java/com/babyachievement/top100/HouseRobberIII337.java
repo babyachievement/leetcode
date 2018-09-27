@@ -32,10 +32,7 @@ public class HouseRobberIII337 {
         final int[] right   = postOrderDfs(root.right);
 
         result[0] = left[1] + right[1] + root.val;
-        result[1] = Math.max(
-                left[0] + right[0], Math.max(left[0] + right[1], Math.max
-                        (left[1] + right[0], left[1] + right[1]))
-        );
+        result[1] = Math.max(left[0], left[1]) + Math.max(right[0], right[1]);
 
         return result;
     }

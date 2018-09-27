@@ -15,5 +15,13 @@ public class BestTimeToBuyAndSellStockwithCooldown309Test {
         final BestTimeToBuyAndSellStockwithCooldown309 sellStockwithCooldown = new BestTimeToBuyAndSellStockwithCooldown309();
         assertThat(sellStockwithCooldown.maxProfit(new int[]{1, 2, 3, 0, 2}),
                    is(3));
+
+        assertThat(sellStockwithCooldown.maxProfit(new int[]{1, 4, 2}),
+                   is(3));
+
+        assertThat(sellStockwithCooldown.maxProfit(new int[]{1, 2, 4}),
+                   is(3));
+        assertThat(sellStockwithCooldown.maxProfit(new int[]{6,1,6,4,3,0,2}),
+                   is(7));
     }
 }
