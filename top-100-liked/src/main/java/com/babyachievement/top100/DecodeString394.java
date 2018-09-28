@@ -25,7 +25,9 @@ public class DecodeString394 {
         while (index < chars.length) {
             final int i = readNumber(chars);
             if (i > 0) {
-                repeats.add(Integer.parseInt(String.valueOf(chars, index-i, i)));
+                repeats.add(Integer.parseInt(String.valueOf(chars,
+                                                            index - i,
+                                                            i)));
             } else if (chars[index] == '[') {
                 final StringBuilder builder = new StringBuilder();
                 stringBuilders.add(builder);
@@ -63,6 +65,53 @@ public class DecodeString394 {
         }
 
         return i;
+    }
+
+
+    public String decodeString2(String s) {
+        char[] str = s.toCharArray();
+        return decodeHelper(str, 0, str.length - 1);
+    }
+
+    public String decodeHelper(char[] str, int start, int end) {
+        //System.out.println(start + "  " + end);
+        StringBuilder re          = new StringBuilder();
+        int           number      = 0;
+        int           m           = 0;
+        int           n           = 0;
+        int           stackNumber = 0;
+        boolean       hasFound    = false;
+        for (int i = start; i <= end; i++) {
+            char c = str[i];
+            if (!hasFound) {
+                if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+                    re.append(c);
+                else if (c >= '0' && c <= '9')
+                    number = number * 10 + c - '0';
+                else if (c == '[') {
+                    hasFound = true;
+                    m = i + 1;
+                    stackNumber++;
+                }
+            } else {
+                if (c == '[') {
+                    stackNumber++;
+                } else if (c == ']') {
+                    stackNumber--;
+                    if (stackNumber == 0) {
+                        n = i - 1;
+                        hasFound = false;
+                        String temp = decodeHelper(str, m, n);
+                        while (number > 0) {
+                            re.append(temp);
+                            number--;
+                        }
+                    }
+                }
+            }
+
+        }
+        return re.toString();
     }
 
 }
