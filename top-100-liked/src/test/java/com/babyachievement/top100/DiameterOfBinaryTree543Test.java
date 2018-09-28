@@ -20,6 +20,6 @@ public class DiameterOfBinaryTree543Test {
         root.right = new TreeNode(3);
 
         final DiameterOfBinaryTree543 diameterOfBinaryTree543 = new DiameterOfBinaryTree543();
-        assertThat(diameterOfBinaryTree543.diameterOfBinaryTree(root), is(4));
+        assertThat(diameterOfBinaryTree543.diameterOfBinaryTree(root), is(3));
     }
 }
