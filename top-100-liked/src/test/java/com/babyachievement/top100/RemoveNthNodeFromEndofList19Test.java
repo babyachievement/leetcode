@@ -22,7 +22,6 @@ public class RemoveNthNodeFromEndofList19Test {
         assertThat(newHead.val, is(1));
         assertNull(newHead.next);
 
-        assertNull(removeNthNodeFromEndofList19.removeNthFromEnd( new
-                                                                          ListNode(1), 1));
+        assertNull(removeNthNodeFromEndofList19.removeNthFromEnd( new ListNode(1), 1));
     }
 }
