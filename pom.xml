@@ -38,6 +38,7 @@
         <module>bst</module>
         <module>structure</module>
         <module>top-100-liked</module>
+        <module>top-interview-questions</module>
     </modules>
 
     <build>
