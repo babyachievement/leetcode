@@ -16,7 +16,7 @@ public class DivideTwoIntegers29 {
      */
     public int divide(int dividend, int divisor) {
         // TODO
-        //check if negative answer
+        //alterToOne if negative answer
         boolean isNeg = (dividend > 0 && divisor < 0) || (dividend < 0 && divisor > 0);
 
         //use long to take care of overflow
