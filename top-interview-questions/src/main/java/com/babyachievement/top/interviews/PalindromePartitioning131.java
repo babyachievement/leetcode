@@ -15,6 +15,22 @@ public class PalindromePartitioning131 {
         return backtrack(s, 0, s.length()-1);
     }
 
+    private void backtrack(List<List<String>> res, List<String> list, String s, int start) {
+        if(list.size() > 0 && start >= s.length()) {
+            res.add(new ArrayList<>(list));
+            return;
+        }
+
+        for(int i = start; i < s.length(); ++i) {
+            if(isPalindromic(s, start, i)) {
+                list.add(s.substring(start, i + 1));
+                backtrack(res, list, s, i + 1);
+                list.remove(list.size() - 1);
+            }
+        }
+
+    }
+
     public List<List<String>> backtrack(String s, int start, int end) {
         List<List<String>> result = new ArrayList<>();
         if (start > end) {
