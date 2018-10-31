@@ -15,7 +15,5 @@ public class LongestSubstringWithAtLeastKRepeatingCharacters395Test {
         final LongestSubstringWithAtLeastKRepeatingCharacters395 leastKRepeatingCharacters395 = new LongestSubstringWithAtLeastKRepeatingCharacters395();
         assertThat(leastKRepeatingCharacters395.longestSubstring("aaabb", 3), is(3));
         assertThat(leastKRepeatingCharacters395.longestSubstring("ababbc", 2), is(5));
-
-
     }
 }
