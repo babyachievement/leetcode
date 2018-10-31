@@ -84,7 +84,7 @@ public class LongestSubstringWithAtLeastKRepeatingCharacters395 {
 
     /**
      * For each h, apply two pointer technique to find the longest substring with at least K repeating characters and the number of unique characters in substring is h.
-     
+
      * @param s
      * @param k
      * @return
