@@ -11,7 +11,23 @@ import org.babyachievement.algorithms.structure.TreeNode;
  */
 public class KthSmallestElementInaBST230 {
     public int kthSmallest(TreeNode root, int k) {
-        // TODO
-        return 0;
+        return find(root, k, new int[1]).val;
+    }
+
+    public TreeNode find(TreeNode root, int k, int[] v) {
+        if (root == null) {
+            return null;
+        }
+
+        TreeNode treeNode = find(root.left, k, v);
+        if (treeNode != null) {
+            return treeNode;
+        }
+        v[0] = v[0] + 1;
+        if (v[0] == k) {
+            return root;
+        }
+
+        return find(root.right, k, v);
     }
 }
