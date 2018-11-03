@@ -9,7 +9,6 @@ package com.babyachievement.top100;
  */
 public class PartitionEqualSubsetSum416 {
     public boolean canPartition(int[] nums) {
-        // TODO
 
         int s = 0;
         for (int num : nums) {
