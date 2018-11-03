@@ -16,16 +16,12 @@ public class MinimumSizeSubarraySum209 {
 
 
             if (s < 0) {
-                while (j <= i && s < 0) {
+                while (j <= i && s <= 0) {
                     s = s + nums[j];
                     j++;
                 }
 
-                if (s == 0)
-                    minLen = Math.min(minLen, (i - j + 1));
-                if (s > 0) {
-                    minLen = Math.min(minLen, (i - j + 1 + 1));
-                }
+                minLen = Math.min(minLen, (i - j + 2));
             }
         }
 

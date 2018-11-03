@@ -11,5 +11,6 @@ public class AddBinary67Test {
         AddBinary67 addBinary67 = new AddBinary67();
         System.out.println(addBinary67.addBinary("11", "1"));
         System.out.println(addBinary67.addBinary("11", "11"));
+        System.out.println(addBinary67.addBinary("111", "11"));
     }
 }
