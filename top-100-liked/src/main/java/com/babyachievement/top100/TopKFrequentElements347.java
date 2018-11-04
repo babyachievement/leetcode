@@ -16,7 +16,6 @@ import java.util.Set;
  */
 public class TopKFrequentElements347 {
     public List<Integer> topKFrequent(int[] nums, int k) {
-        // TODO
         final ArrayList<Integer> result = new ArrayList<>();
         if (nums == null || nums.length == 0 || k == 0) {
             return result;
