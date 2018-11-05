@@ -34,7 +34,7 @@ public class Three3SumClosest16 {
                 } else {
                     l++;
                 }
-               
+
             }
         }
 
