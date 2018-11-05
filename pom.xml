@@ -39,6 +39,7 @@
         <module>structure</module>
         <module>top-100-liked</module>
         <module>top-interview-questions</module>
+        <module>week-01</module>
     </modules>
 
     <build>
