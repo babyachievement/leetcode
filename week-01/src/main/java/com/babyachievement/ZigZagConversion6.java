@@ -12,7 +12,6 @@ import java.util.List;
  */
 public class ZigZagConversion6 {
     public String convert(String s, int numRows) {
-        // TODO
         if (s == null || s.length() <= 1) {
             return s;
         }
