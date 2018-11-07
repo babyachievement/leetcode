@@ -1,5 +1,6 @@
 package com.babyachievement;
 
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -7,6 +8,7 @@ import java.util.List;
  */
 public class PermutationsII47 {
     public List<List<Integer>> permuteUnique(int[] nums) {
+        Arrays.sort(nums);
         // TODO
         return null;
     }
