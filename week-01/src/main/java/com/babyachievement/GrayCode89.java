@@ -46,6 +46,18 @@ public class GrayCode89 {
         return current ^ (1 << (i - 1));
     }
 
+    /**
+     * for example you have the answer for n = 2 as (00, 01, 11, 10), how you can get the answer for n = 3?
+     (1) you need all the answer in n = 2, copy them (000, 001, 011, 010);
+     (2) add pow(2,2) = 4 to all the answer in n = 2 as in (1) and add them to n = 3, BUT! start from the last one, that is (110, 111, 101, 100)!!!
+
+     Why this work?
+     (1) the answer in n = 2 is valid, (0-3 valid)
+     (2) since we start from the last one, that is "10", we add 4 to it, it become "110", still valid, (3-4 valid)
+     (3) since we add 4 to all answer in n = 2; they are still one bit different from each other, then also valid! (4-7 valid)
+     * @param n
+     * @return
+     */
     public List<Integer> grayCode2(int n) {
         List<Integer> gray_code = new ArrayList<>();
         gray_code.add(0);
