@@ -39,9 +39,6 @@ public class ReverseLinkedListII92 {
         while (i < n && current != null && current.next != null) {
             temp = current.next.next;
 
-
-
-
             current.next.next = currentHead;
             currentHead = current.next;
             current.next = temp;
