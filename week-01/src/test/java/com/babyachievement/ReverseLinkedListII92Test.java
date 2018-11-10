@@ -15,7 +15,7 @@ public class ReverseLinkedListII92Test {
     @Test
     public void reverseBetween() {
         final ReverseLinkedListII92 reverseLinkedListII92 = new ReverseLinkedListII92();
-        final ListNode head = LinkListUtils.buildListNod(
+        final ListNode head = LinkListUtils.buildList(
                 new int[]{1, 2, 3, 4, 5});
 
         final ListNode listNode = reverseLinkedListII92.reverseBetween(head,

@@ -7,7 +7,7 @@ package org.babyachievement.algorithms.structure.utils;
 import org.babyachievement.algorithms.structure.ListNode;
 
 public abstract class LinkListUtils {
-    public static ListNode buildListNod(int[] nums) {
+    public static ListNode buildList(int[] nums) {
         if (nums == null || nums.length == 0) {
             return null;
         }

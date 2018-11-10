@@ -16,7 +16,7 @@ public class RemoveDuplicatesFromSortedListII82Test {
     public void deleteDuplicates() {
         final RemoveDuplicatesFromSortedListII82 removeDuplicates = new
                 RemoveDuplicatesFromSortedListII82();
-        final ListNode listNode1 = LinkListUtils.buildListNod(new int[]{1, 2,
+        final ListNode listNode1 = LinkListUtils.buildList(new int[]{1, 2,
                 3, 3, 4, 4, 5});
 
         final ListNode newHead1 = removeDuplicates.deleteDuplicates(listNode1);
@@ -25,17 +25,14 @@ public class RemoveDuplicatesFromSortedListII82Test {
         assertThat(newHead1.next.next.val, is(5));
         assertNull(newHead1.next.next.next);
 
-        final ListNode listNode2 = LinkListUtils.buildListNod(new int[]{1, 1, 1, 2, 3});
+        final ListNode listNode2 = LinkListUtils.buildList(new int[]{1, 1, 1, 2, 3});
         final ListNode newHead2  = removeDuplicates.deleteDuplicates(listNode2);
         assertThat(newHead2.val, is(2));
 
-        assertNull(removeDuplicates.deleteDuplicates(LinkListUtils.buildListNod(
+        assertNull(removeDuplicates.deleteDuplicates(LinkListUtils.buildList(
                 new int[]{1, 1})));
         final ListNode listNode3 = removeDuplicates.deleteDuplicates(
-                LinkListUtils
-                        .buildListNod
-                                (new
-                                         int[]{1, 2, 2}));
+                LinkListUtils.buildList(new int[]{1, 2, 2}));
         assertThat(listNode3.val, is(1));
         assertNull(listNode3.next);
 

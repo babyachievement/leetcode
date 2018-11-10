@@ -6,7 +6,6 @@ package com.babyachievement;
 public class NextPermutation31 {
     public void nextPermutation(int[] nums) {
         // 2 3 1 4, 2 4 3 1  -> 3 1 2 4
-        // TODO
 
         int i = nums.length - 1;
         while (i > 0) {
