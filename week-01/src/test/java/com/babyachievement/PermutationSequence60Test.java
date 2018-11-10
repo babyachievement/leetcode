@@ -13,7 +13,8 @@ public class PermutationSequence60Test {
     @Test
     public void getPermutation() {
         final PermutationSequence60 permutationSequence60 = new PermutationSequence60();
-        assertThat(permutationSequence60.getPermutation(3, 3), is("213"));
+        assertThat(permutationSequence60.getPermutation3(3, 3), is("213"));
+        assertThat(permutationSequence60.getPermutation3(3, 6), is("321"));
         assertThat(permutationSequence60.getPermutation(4, 9), is("2314"));
     }
 }
