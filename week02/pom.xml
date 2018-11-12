@@ -9,9 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.babyachievement</groupId>
-    <artifactId>week-01</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <artifactId>week-02</artifactId>
 
     <dependencies>
 
@@ -29,5 +27,6 @@
             <artifactId>hamcrest-all</artifactId>
         </dependency>
     </dependencies>
+
 
 </project>
