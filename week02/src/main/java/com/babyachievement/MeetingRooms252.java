@@ -12,13 +12,13 @@ import java.util.List;
  * https://www.lintcode.com/problem/meeting-rooms/description
  */
 public class MeetingRooms252 {
-    class Interval
-    {
+    public static class Interval {
         int start, end;
-        Interval( int start, int end){
-        this.start = start;
-        this.end = end;
-    }
+
+        public Interval(int start, int end) {
+            this.start = start;
+            this.end = end;
+        }
     }
 
     public boolean canAttendMeetings(List<Interval> intervals) {
