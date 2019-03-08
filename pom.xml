@@ -41,6 +41,7 @@
         <module>top-interview-questions</module>
         <module>week01</module>
         <module>week02</module>
+        <module>week03</module>
     </modules>
 
     <build>
