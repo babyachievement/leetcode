@@ -67,4 +67,43 @@ public class SpiralMatrix54 {
 
         return result;
     }
+
+    public List<Integer> spiralOrder2(int[][] matrix) {
+        List<Integer> result = new ArrayList<>();
+        if (matrix == null || matrix.length == 0 || matrix[0].length == 0) {
+            return result;
+        }
+
+        int top = 0;
+        int bottom = matrix.length-1;
+        int left = 0;
+        int right = matrix[0].length-1;
+        while(left<=right && top<=bottom){
+            int j=left;
+            while(j<=right)
+                result.add(matrix[top][j++]);
+            top++;
+            if(top>bottom)
+                return result;
+            j=top;
+            while(j<=bottom)
+                result.add(matrix[j++][right]);
+            right--;
+            if(left>right)
+                return result;
+            j=right;
+            while(j>=left)
+                result.add(matrix[bottom][j--]);
+            bottom--;
+            if(top>bottom)
+                return result;
+            j=bottom;
+            while(j>=top)
+                result.add(matrix[j--][left]);
+            left++;
+        }
+
+        return result;
+
+    }
 }
