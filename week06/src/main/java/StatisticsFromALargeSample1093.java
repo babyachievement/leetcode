@@ -32,7 +32,7 @@ public class StatisticsFromALargeSample1093 {
         int mid = total/2;
 
 
-
+        return result;
 
     }
 }
