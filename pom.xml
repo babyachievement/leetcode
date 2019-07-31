@@ -46,6 +46,7 @@
         <module>week05</module>
         <module>week06</module>
         <module>week07</module>
+        <!--<module>hadoop-demo</module>-->
     </modules>
 
     <build>
